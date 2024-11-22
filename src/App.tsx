@@ -1,15 +1,16 @@
+import React from 'react';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import InvoiceProcessing from './components/InvoiceProcessing';
 
-import './App.css'
-
-function App() {
-
+const App: React.FC = () => {
   return (
+    <Provider store={store}>
+      <div className="min-h-screen bg-gray-50">
+        <InvoiceProcessing />
+      </div>
+    </Provider>
+  );
+};
 
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
-
-  )
-}
-
-export default App
+export default App;
